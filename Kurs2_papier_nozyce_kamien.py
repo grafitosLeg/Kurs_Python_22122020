@@ -1,7 +1,7 @@
 #Gra papier, nozyczki, kamien
 #import getpass  - maskowanie inputa
 
-import getpass
+#import getpass
 
 gracz1_wynik = 0
 gracz2_wynik = 0
@@ -14,7 +14,7 @@ opcje = ['kamien', 'papier', 'nozyczki']
 while gracz1_wynik != 3 and gracz2_wynik != 3:
     wybor_gracza_jest_poprawny = True
     while wybor_gracza_jest_poprawny:
-      wybor_Gracz1 = getpass.getpass('Gracz 1 podaj wybor: ')
+      wybor_Gracz1 = input('Gracz 1 podaj wybor: ')
       if wybor_Gracz1 in opcje:
          wybor_gracza_jest_poprawny = False 
 
