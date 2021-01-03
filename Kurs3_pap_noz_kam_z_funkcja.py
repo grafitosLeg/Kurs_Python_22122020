@@ -35,4 +35,13 @@ def sprawdz_wyniki (wybor_gracz1,wybor_gracz2):
          return -1
     
 
-#
+#uruchamiamy funkcje
+#gramy dopóki któryś z graczy nie wygra 3razy
+
+while gracz1_wynik != 3 and gracz2_wynik != 3:
+    wybor_gracz1 = pobierz_wybor ('Gracz1')
+    wybor_gracz2 = pobierz_wybor ('Gracz2')
+    wynik = sprawdz_wyniki (wybor_gracz1, wybor_gracz2)
+
+
+
