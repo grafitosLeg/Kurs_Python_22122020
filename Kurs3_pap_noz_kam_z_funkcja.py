@@ -20,14 +20,14 @@ def pobierz_wybor (gracz):
 
 #definicja funkcji w której sprawdzamy wyniki 
 
-def sprawdz_wyniki (wybor_gracz1,wybor_gracz2):
+def sprawdz_wyniki (wybor_gracz1, wybor_gracz2):
     if wybor_gracz1 == 'papier' and wybor_gracz2 == 'kamien'\
     or wybor_gracz1 == 'nozyczki' and wybor_gracz2 == 'papier'\
     or wybor_gracz1 == 'kamien' and wybor_gracz2 == 'nozyczki':
         print ('Wygrał Gracz 1')
         return 1 
     
-    elif wybor_gracz2 == wybor_gracz2:
+    elif wybor_gracz1 == wybor_gracz2:
         print ('REMIS')
         return 0    
     else:
@@ -44,4 +44,16 @@ while gracz1_wynik != 3 and gracz2_wynik != 3:
     wynik = sprawdz_wyniki (wybor_gracz1, wybor_gracz2)
 
 
+#uruchamiamy licznik wyników dla graczy
 
+    if wynik == 1:
+       gracz1_wynik += 1
+
+    elif wynik == -1:
+       gracz2_wynik += 1
+
+
+if gracz1_wynik > gracz2_wynik:
+    print ('Całą grę wygrał Gracz1')
+else:
+     print('Całą grę wygrał Gracz2')
